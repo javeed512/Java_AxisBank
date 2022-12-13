@@ -1,0 +1,19 @@
+
+1. Create Local Git Repo:
+git init 
+
+2. git remote add origin https://github.com/javeed512/Java_AxisBank.git
+
+Above steps only once.
+
+3. git add .
+
+4. git commit -m "Day1 Demos and Notes"
+
+5. git push  origin master 
+
+
+Note: If we connecti first time to github from local git you need to enter username and emailid to verify your self
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
