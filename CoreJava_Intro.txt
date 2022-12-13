@@ -1,0 +1,357 @@
+Java Lang:
+----------
+
+1. Console / Desktop / Standalone App
+Ex: Calculator , Notepad, MS Office , Browser , IDE Eclipse , Paint ,O.S
+
+2. Web Applications
+Servers 
+Ex: tomcat , weblogic , pivotal server
+Any Web site 
+Flipkart , Google , Facebook , OtoGuru ....
+
+3. Mobile Apps
+Ex: Wats App, Instagram , Facebook , Games
+
+
+OOPs:
+-----
+1.Object and Class
+2.Inheritance
+3.Polymorphism
+4.Abstraction
+5.Encapsulation
+
+
+Naming Convections / Rules:
+-------------------------------------------
+package : lower cases
+======================
+com.axis.login
+
+demo.myapp 
+	
+Ex: java.lang , java.util , java.time , java.sql , javax.servlets , 
+org.hibernate , org.springframework 
+
+
+package syntax:
+
+domainname.companyname.projectname.modulename;
+
+
+
+Class/Interface/Enum/Exception (type)
+======================================
+InitCap 
+
+
+StudentDemo , BankAccount 
+
+Ex: Object , String , System , Integer , Double , LocalDate, 
+   List , Set , Map , Connection , PreparedStatement 
+
+
+Constructor names: InitCap (same as class)
+=================
+Object() , String()
+
+methods / variables:
+===================
+
+camel-case
+
+ Var Ex: name, city , address , cityName, studentName ,
+
+	accountDetails 
+
+Methods Ex:   setName() , getName() , getAccountDetails() , isValid() , get() , set()
+
+final Variable:
+
+	Block Letters
+
+	Ex: IFSC , PINCODE , PI , URL , USER_NAME , PASSWORD
+
+
+
+
+Identifier : Any name in program
+keywords : Any reserved word are known as keywords int , boolean , if , switch , case , void ,public,class
+
+
+public class Demo {
+
+
+	public static void main(String[] args){
+
+	System.out.println("Welcome");
+
+	Scanner scanner = new Scanner(System.in);
+
+
+
+	}
+
+	public int add(int x,String[] s){
+
+
+
+	}
+
+
+}
+
+
+
+class PrintStream{  -->monitor
+
+	void print(){
+			::::	
+	}
+	
+	void println(){
+
+		:::::
+	}
+	
+
+} 
+
+InputStream --> keyword
+
+
+
+
+class System {
+
+public static PrintStream out = new PrintStream();
+public static PrintStream err;
+
+public static InputStream in = new InputStream();
+
+
+
+
+}
+
+
+---------------------------------
+
+Class:
+Class is a Blue print which is used to create instances/objects
+
+Class is a colletion objects / Class is  imaginary
+
+Class is a reusable component in java.
+
+Object: It is  a physical entity exist in real world
+  Object is an instance of any class.
+
+
+Super most class in Java is Object class
+
+public class Demo  extends Object{
+
+	public Demo(){
+
+
+	}
+
+
+}
+
+Note: Every Constructor will have first line of code as super();
+
+
+
+public  class Object{
+
+	public Object(){  // super();
+
+			// creating objects
+			// generating hc
+			// allocate instance vars copies to each obj
+			// assing default values to instance vars
+			// memory allocation
+	}
+
+	String toString(){ return "package.ClassName@123aef33" }
+	int hashcode(){.....}
+	boolean equals(){..... }
+	notify(){ }
+	notifyAll(){ }
+	wait(){ }
+	finalize(){  }
+	getClass(){  }
+
+
+
+
+}
+
+
+Inheritance:
+=============
+
+class Demo extends Object  {
+
+
+
+}
+
+class Test  extends Demo{
+
+
+
+}
+
+
+Objet 
+    | ---> Demo 
+	      |----> Test
+
+
+
+----------------------------------------
+
+
+interface   IDemo1  {
+
+
+
+} 
+
+interface IDemo3{
+
+
+
+
+}
+ 
+
+
+interface  IDemo2  extends IDemo1 , IDemo3{
+
+
+
+}
+
+
+
+
+
+
+-------------------------------
+
+
+class  Hello   implements IDemo1 , IDemo2, IDemo3{
+
+
+
+}
+
+
+
+Polymorphism:
+-------------
+Poly-many
+morphism - forms
+
+1.static polymorphism / compile time polymorphism
+Ex:  constructor and methods  overloading 
+
+2. Dynamic polymorphism / Runtime polymorphism
+
+Ex1: method overriding
+parent to child class
+
+Ex2: Object o = new Test();// runtime polymorphism
+    Object o1 = new String(); 
+
+
+Encapsulation:
+=============
+Datahiding  or Encapsulating data and data members inside single unit/cell.
+
+private variables (data hiding)
+
+
+Abstractions:
+=============
+Highlighting set of services to the user/developers and hiding its implementation code.
+
+interface + abstract / concrete class
+
+Interface: Set of Services which is highlighted by service provider.
+
+
+
+Day1: Revise OOPS Concepts
+
+Axis Bank App:
+==============
+
+Interface 
+
+public interface IBankService {
+
+	public void  deposit(double amount);	
+	public void withdraw(double amount);
+	public void  checkBalance();
+
+
+} 
+
+abstract class BankServiceImp1 implements IBankService{
+
+	double balance = 1000;
+
+	// deposit(double amount){...}
+	// withdraw(double amount){..}
+
+
+}
+
+public  class BankServiceImp2 extends BankServiceImp1{
+
+	// checkBalance(){sysout("Total Balance "+balance);}
+
+
+}
+
+
+
+public  class AtmMachine {
+
+
+	IBankService service =	new BankServiceImp2();
+
+	public static  void main(String[] ar){
+
+		// display menu
+		// select the option from menu
+		// use switch cases
+		// terminate menu / loop when option 0 is enter
+		//enter amount from K.B
+	// case 1: service.deposit(amount)
+
+
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
