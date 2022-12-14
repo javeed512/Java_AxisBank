@@ -1,0 +1,65 @@
+Task Manager Assignment:
+===========
+bean package
+class Task {
+
+	int taskId;
+	String taskName;
+	String taskDesc;
+
+	//setter & getter
+
+}
+
+
+bean package
+ class User{ 
+
+	int userId;
+	String userName;
+	String password;
+
+		// setter and getter ...
+
+  }
+
+
+
+
+-------------------------------------
+
+service package
+
+
+
+interface ITaskService {
+
+	boolean/int	addTask(Task task);
+	boolean/int	updateTask(Task task);
+	boolean/int 	deleteTask(int taskId);
+	List<Task>	getAllTasks();
+
+
+}
+
+
+
+class TaskServiceImp implements ITaskService{
+
+//Collection object for storing tasks List recommend
+// Collection object to store few user objects
+
+	// all above implementations
+
+}
+
+
+UI Main class:
+
+i. login 
+ii. see menu
+	1. add task
+	2. update
+	3. delete by id
+	4. show all
+	5. exit/logout

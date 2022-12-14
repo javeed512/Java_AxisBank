@@ -1,0 +1,240 @@
+try{
+
+	risky code
+}
+catch(){
+
+	// catch exceptions 
+
+}
+finally{
+
+// mandatory code
+
+}
+
+--------------------
+try - catch1 , catch2 , catch3 - finally
+try-finally
+
+try{
+	try{}catch(){...}
+
+
+
+}
+
+catch(){
+
+	try{}
+	catch(){}
+	finally{}	
+}
+
+finally{
+
+	try{ } catch(){ ...}
+
+
+
+
+}
+
+
+
+
+throws 
+try-catch-finally
+
+throw key word
+
+
+public class ThreadDemo {
+	
+	public ThreadDemo() {
+		
+		super();
+	}
+
+	public static void main(String[] args) { // Main-Thread or Daemon Thread
+
+
+		System.out.println("Hello from main()");
+		
+			add(4,4); 
+		
+	}
+	
+	public static int add(int a,int b) { // child thread
+		
+		int x;
+		
+		System.out.println(x);
+		
+		return a+b;
+		
+	}
+	
+	
+	
+
+}
+
+
+-----------------------------------------------
+
+Local Variables:
+Variables declare inside any block (methods, constructors,try-catch,for,while,if ....)  or
+declare as parameters of methods or constructor or blocks
+
+Local Variables are also known as Thread Level Variables
+
+Instance variables are also known as Object level vars
+
+Static variables are also known as Class Level.
+
+
+
+
+
+
+
+Thread: It is a piece of code.
+
+
+java.lang.Thread;
+
+
+public interface Runnable{
+
+	void run();
+
+
+}
+
+public class  Thread implements  Runnable{
+
+
+	public void run(){
+
+		// empty
+	}
+
+
+	// setters	
+	// getters
+
+	public void start(){
+
+		// set the thread group
+		// set the thread name
+		// allocate memory
+		// assign thread to thread-scheduler
+	
+		// priority
+		run();  // call run method
+		
+	
+
+
+	}
+
+
+
+}
+
+
+
+---------------------------------------
+
+Revise
+Pojo/Bean Classes
+
+Java8 Features
+1.Lambda Expression
+2.Functional Interfaces and Types
+3. Stream API
+4. java.time package
+5. method reference (::)
+7. Optional Type
+
+
+Task Manager Assignment:
+===========
+bean package
+class Task {
+
+	int taskId;
+	String taskName;
+	String taskDesc;
+
+	//setter & getter
+
+}
+
+
+bean package
+ class User{ 
+
+	int userId;
+	String userName;
+	String password;
+
+		// setter and getter ...
+
+  }
+
+
+
+
+-------------------------------------
+
+service package
+
+
+
+interface ITaskService {
+
+	boolean/int	addTask(Task task);
+	boolean/int	updateTask(Task task);
+	boolean/int 	deleteTask(int taskId);
+	List<Task>	getAllTasks();
+
+
+}
+
+
+
+class TaskServiceImp implements ITaskService{
+
+//Collection object for storing tasks List recommend
+// Collection object to store few user objects
+
+	// all above implementations
+
+}
+
+
+UI Main class:
+
+i. login 
+ii. see menu
+	1. add task
+	2. update
+	3. delete by id
+	4. show all
+	5. exit/logout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
