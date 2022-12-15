@@ -1,0 +1,176 @@
+Java8 Features:
+---------------
+1. Functional Interface
+Interface which has exactly only one abstract method
+2. default and static methods
+3. Lambda Expression
+4. Types of Functional Interfaces
+ i.Consumer ii.Supplier iii.Predicate iv. Function 
+5. Stream API
+6. java.time package
+7. Optional Type
+8. method or constructor (::)
+
+Functional Inteface:
+----------------------
+
+@FunctionalInterface
+public interface MyInterface {
+
+		
+		public int add(int a, int b);
+	
+		public default  void sayHello() {  // it can be static also
+			
+			System.out.println("from interface");
+			
+		}
+	
+	
+}
+
+Implementation of above can be done in 2 ways
+
+1. Using old Java7 technique
+public class  DemoImp implements MyInterface{
+
+	public int add(int a, int b){
+
+	return a+b;
+
+	}
+
+	public static void main(String ar[]){
+
+	MyInterface mi =	new DemoImp();
+
+		int res =	mi.add(5,4);
+
+		System.out.println(res);
+	}
+}
+
+
+2. Using Java8 Lambda Expression (inside any class , any method)
+
+Lambda Expression:
+-------------------
+
+ MyInterface mi = (int a, int b)->{return a+b;}; // lambda expression
+		  
+		  int res = mi.add(5, 6);
+
+
+
+Types of Functional Interfaces:
+---------------------------------
+i. Consumer  Functional Interface
+
+It accept arguments and return void.
+Ex:
+public interface MyInterface{ // Consumer 
+
+	public void setName(String name);
+
+}
+
+ii. Supplier Functional Interface
+
+It returns value but dont accept any arguments 
+Ex:
+public interface MyInterface{ // Supplier
+
+	public int    getSalary();
+
+}
+
+ii. Predicate Functional Interface
+
+It returns only boolean  and it accept arguments 
+Ex:
+public interface MyInterface{ // Predicate
+
+	public boolean isValidAccount(int accountNo);
+
+}
+
+iv. Function Functional Interface
+
+It returns any  value except boolean and  accept any arguments 
+Ex:
+public interface MyInterface{ // Function
+
+	public int    add(int a, int b);
+
+}
+
+v.Optional<T> Type
+
+
+public  Optional<String>  getMyName(String myname){
+
+		return  myname; // orElse(null);
+
+}
+
+main(){
+
+	Optional<String> op =	getMyName("Javeed");
+
+		if(op.isPresent()){
+
+			op.get(); // --> Javeed
+		}
+
+}
+
+--------------------------------------------------
+
+
+API : Application Programming Interface
+
+package
+ Interfaces, Classes , Imp Classes
+ methods / services
+
+Which consist of ready made code or logics or services , we can use to complete some task  
+
+Stream API:
+-----------
+
+1. Stream data 
+2. apply  pipeline
+
+
+
+
+class Address{
+
+	int aid;
+	String city;
+
+}
+
+class Employee{
+
+ int eid;
+ String ename;
+ Address addr;	
+
+}
+
+
+
+
+Eager:
+-------
+new Employee(); ----> new Address();
+
+
+
+Lazy Loading
+-------------:
+
+new Employee();  addr = null;
+
+	e1.getAddr(); // ---> new Address();
