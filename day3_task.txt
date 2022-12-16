@@ -1,0 +1,11 @@
+1.add
+2.update
+3. delet
+4. get all (stream api)
+5. get by taskid (stream api)
+6. get all task sorted
+
+Revise
+Basics of Servlets
+JSP 
+JDBC

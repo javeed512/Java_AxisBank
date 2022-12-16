@@ -1,0 +1,140 @@
+Servlet = Writing HTML code inside Java code.
+JSP = Writing Java code inside HTML.
+
+
+
+Servlet Scope variables:
+----------------------------
+1. request 
+2. session
+3. context / application
+
+
+setAttribute(k,v);
+getAttribute(k); --> v
+
+removeAttribute(k); --> delete value
+
+
+JSP Scope variables:
+----------------------------
+1. page
+2. request 
+3. session
+4. context / application
+
+
+
+JSP Elements ?
+===============
+1.Template text
+->Any text + HTML code in JSP known as Template text
+2.Scriplet
+<%  any java code %>
+3.Declaration
+<%!  any java code like instace,static vars%>
+4.JSP Expression
+<%= jsp expressions%>
+5.EL - Expression
+	${ el-expressions }
+
+6. JSP Directives 
+<%@ directives  %>
+@page , @taglib , @include 
+
+7. Action Tags
+<jsp:actionsTags>
+<jsp:useBean/>
+<jsp:setProperty/>
+<jsp:getProperty/>
+
+8. JSTL - JSP Tag Library (third party)
+core tag lib
+sql tag lib
+1. get the jar
+2. import jar or lib
+<%@taglib uri="url_address" prefix="c"  %>
+
+<c:out>
+<c:test>
+<c:fortest>
+
+
+
+
+JSP life cycle
+
+------------------
+
+
+demo.jsp ---> jsp engine --> demo.java ---> javac ---> demo.class ---> JVM
+
+
+public class  Demo  extends HttpServlet{  // Auto generated servlet
+
+		
+private int eid;
+private static String ename;
+		
+
+	jspInit(){
+
+
+
+	}
+
+	jspService(HttpServletRequest request ,HttpServletResponse  response){
+
+		JspWriter  out =response.getWriter();
+		HttpSesion session;
+		ServletContext application;
+		Exception exception;
+		PageCotext pageContext;
+		Object page;
+
+		int x = 99;
+
+		out.println("x value "+x);
+
+		out.print("Value of X again from JSP EXP :")
+
+		out.print(x);
+
+
+		session.setAttribute("username", "javeed");
+
+		session.setAttribute("password", "tiger");
+
+
+
+	}
+
+	jspDestroy(){
+
+
+	}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
