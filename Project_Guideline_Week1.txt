@@ -1,0 +1,78 @@
+
+BackEnd:
+---------
+
+Database 
+Ex:   create database pms;
+Create tables
+Ex:   
+create table products(pid bigint primary key,pname varchar(20),price decimal,dop date);
+
+
+
+Java server side implementation
+Bean Classes
+
+Product
+productId , productName , price , dop 
+
+------------------------------------------
+ProductDao Layer:
+
+IProductDao interface
+
+ProductDaoImp class
+-------------------------------------------
+ProductService Layer:
+
+IProductService interface
+
+ProductServiceImp class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CRUD OPERATIONS:
+-----------------
+Logically ADD and UPDATE are same
+
+Logically SELECT ONE and DELETE ONE are same
+
+SELECT ALL 
+
+
+
+
+
+
+
+
+
+

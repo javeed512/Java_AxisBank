@@ -12,7 +12,10 @@
 
 </head>
 <body>
-<form class="container col-md-4"  action=" " method="post">
+
+<jsp:include  page="/views/header.jsp" />
+
+<form class="container col-md-4"  action="http://localhost:8080/ProductManagementSystem/ProductController" method="post">
  
  <div> 
  <label>Enter Pid:</label>
@@ -30,7 +33,7 @@
  <input type="text"  class="form-control" name="price" />
   </div>
   <br>
-  <button type="submit" class="btn btn-primary">UPDATE </button>
+  <button type="submit" class="btn btn-success" value="update" name="action"  >UPDATE </button>
   
 </form>
 

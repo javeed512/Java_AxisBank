@@ -12,6 +12,9 @@
 
 </head>
 <body>
+
+<jsp:include  page="/views/header.jsp" />
+
 <form class="container col-md-4"  action="http://localhost:8080/ProductManagementSystem/ProductController" method="post">
  
  <div> 
