@@ -1,0 +1,78 @@
+
+Lombok Project:
+----------------
+1. Download  project lombok.jar from https://projectlombok.org/download
+2. run lombok.jar file using
+	-> java -jar  lombok.jar
+  Window will appear
+3. click the specify location button and select the path for eclips/sts folder in which( .exe file )
+4. install button (lombok installed successfully)
+5. Restart IDE eclipse/sts.
+
+
+
+
+Spring Framework:
+-------------------
+
+Set of APIs = Framework
+
+Spring Framework is modular in nature.
+
+Core
+Spring Core
+Spring Bean
+Spring context
+spring test
+
+spring jdbc
+spring ORM --> Hibernate, JPA
+spring Servlets
+Spring MVC
+
+
+
+
+
+Spring Annotations:
+-------------------
+Basic Annotations
+
+@Component
+@Service
+@Repository
+@Bean
+
+@Configuration
+@ComponentScan
+
+@Autowired
+
+@Scope
+@Value
+
+
+Web Apps:
+--------
+
+@Controller
+@RequestMapping
+@RequestBody
+@ResponseBody
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
