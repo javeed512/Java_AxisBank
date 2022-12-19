@@ -1,0 +1,78 @@
+JSON
+
+JAX-RS
+
+REST API Intro
+
+
+Dependency Injection:
+-----------------------
+Its a process where one class object get injected into another class object.
+1. Constructor DI
+2. Setter method DI
+
+
+
+
+Ex:
+Employee.xml (semi structure)
+
+<Employee>
+	<Eid>101</Eid>
+	<Ename>javeed</Ename>
+	<Salary>40000</Salary>
+</Employee>
+
+
+JSON: Data format
+------------------
+
+JSON:
+----
+Java Script Object Notation.
+1. Storing data in structural format
+2. send or receive data from one machine to another machine.
+3. for exchanging data
+
+
+XML got replace by JSON.
+
+
+employee:{
+
+"eid":101,
+"ename":"javeed",
+"salary":90000	
+
+}
+
+
+REST API:
+==========
+REST : Representational State Transfer.
+It is used for access web services/micro services.
+
+Web service:
+-------------
+Any service which is available online from publisher to the consumers known as web service.
+
+
+Http Methods supported by REST API:
+
+1. GET   
+2. POST 
+3. PUT
+4. DELETE
+
+GET: To select/fetch data from server
+POST: To insert/create new record/data on server
+PUT : To update / modify existing data on server
+DELETE : To delete/remove data from server
+PATCH : To update partial data on server
+
+
+
+
+
+
+
