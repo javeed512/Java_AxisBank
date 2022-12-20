@@ -1,0 +1,150 @@
+Spring Web MVC:
+
+Spring framework provides a seperate module/api for web development.
+Spring  framework follows its own MVC Architecture.
+
+Spring MVC consist of 2 controller
+1. Front End Controller (DispatcherServlet) 
+2. User defined controller
+
+->To hand request Mappings it uses Handler Mapper.
+->To find view it takes help of view resolver (InternalViewResolver class)
+
+In User defined Web Controller we can return 
+1. text
+2. views (html,jsp etc)
+3. model(data)
+4. model and view
+
+
+
+Web Apps:
+--------
+@Controller - To declare web controller
+
+@RequestMapping - for mappings in controller 
+
+@RequestBody
+@ResponseBody
+
+
+
+
+
+
+
+
+
+
+
+Explicit setup 
+
+
+1.Maven
+2.External Tomcat server
+3. External DB
+4. spring xml config
+5. go and search dependencies from maven repo
+...
+..
+
+Spring Boot Project / Tool
+----------------------------
+Implicitly available
+1. maven
+2. embedded tomcat server
+3. embedded H2 DB
+4. application.properties or application.yml
+5. implicit option to add depencies through spring starter while creating project
+
+
+
+Does not support
+1. XML Format
+2. JSP pages
+
+
+
+
+
+addObject("username","javeed"){
+
+	HttpSession session = request.getSession();
+
+		session.setAttribute("username","javeed");
+
+	
+
+}
+
+-------------------------------------
+Web Controller methods
+
+
+
+
+
+reqObj(username,password)  --->  DispatcherServlet -->  LoginController  add(User user){ ... }
+
+				
+
+
+
+class DispatcherServlet extends HttpServelt{
+
+
+	doPost(HttpServletRequest request){
+		
+		User user = new User();
+	
+		user.setUsername(request.getParameter("username"));
+		user.setPassword(request.getParameter("password"));	
+
+
+	}
+
+
+
+
+}
+
+
+
+mysql database :
+-----------------
+
+mysql> create database  mydb;
+Query OK, 1 row affected (0.28 sec)
+
+mysql> use mydb;
+Database changed
+mysql> create table User_Table(userId integer primary key  AUTO_INCREMENT, username varchar(20) ,password varchar(20));
+Query OK, 0 rows affected (0.67 sec)
+
+mysql> desc user_table;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| userId   | int         | NO   | PRI | NULL    | auto_increment |
+| username | varchar(20) | YES  |     | NULL    |                |
+| password | varchar(20) | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+3 rows in set (0.16 sec)
+
+mysql> insert into user_table(username,password)  values('king','kingkhan');
+Query OK, 1 row affected (0.14 sec)
+
+mysql> select * from user_table;
++--------+----------+----------+
+| userId | username | password |
++--------+----------+----------+
+|      1 | king     | kingkhan |
++--------+----------+----------+
+1 row in set (0.00 sec)
+
+
+
+
+
+
+
