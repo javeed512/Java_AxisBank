@@ -3,6 +3,7 @@ package com.axis.restapi.restcontroller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -147,6 +148,29 @@ public class EmployeeRestController {
 			return service.getBySalaryRange(low, high);
 			
 		}
+		
+		
+		
+		@DeleteMapping("/delete/ename/{ename}")
+		public ResponseEntity<String> deleteByEname( @PathVariable String ename){
+			
+			
+			return service.deleteByEname(ename);
+			
+			
+			
+		}
+		
+		
+		@GetMapping("/get/ename-sorted")
+		public List<Employee>  getBySortedEname( ){
+			
+			
+			return	service.getBySortedEname();
+		
+		
+	}
+	
 		
 		
 	

@@ -3,6 +3,8 @@ package com.axis.restapi.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -96,8 +98,30 @@ public class EmployeeServiceImp implements IEmployeeService {
 		// TODO Auto-generated method stub
 		return repo.findBySalaryRange(low, high);
 	}
+
+	@Override
+	public ResponseEntity<String> deleteByEname(String ename) {
+
+
+			repo.deleteByEname(ename);
+			
+				
+				
+		
+		return new ResponseEntity<String>("Record Deleted",HttpStatus.ACCEPTED);
+	}
 	
 	
+	
+	public List<Employee>  getBySortedEname(){
+		
+		
+				//repo.findAll(Pageable.ofSize(100));
+		
+			return	repo.findAll(Sort.by("ename").descending());
+		
+		
+	}
 	
 	
 	

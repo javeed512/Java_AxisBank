@@ -30,7 +30,15 @@ public interface IEmployeeService {
 		
 		
 		List<Employee>		getBySalaryRange(double low, double high);
+		
+		
+		
+		ResponseEntity<String>	deleteByEname(String ename);
 	
 	
+		public List<Employee>  getBySortedEname();
+		
+		
+		
 
 }
