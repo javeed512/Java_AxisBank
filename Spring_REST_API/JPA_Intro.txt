@@ -1,0 +1,31 @@
+
+Spring Data JPA:
+Interfaces:
+------------
+
+Repository<T,ID>
+ |
+ CrudRepository<T,ID>
+   |
+  PagingAndSortingRepository<T,ID>
+    | 
+   JpaRepository<T,ID>
+
+
+important methods from above interfaces:
+
+ insert ,update --> Entity save(Entity);
+                         
+			saveAll(Collection);
+
+ select ---> Entity findById(long id);
+	    List<Entity>  findAll();
+
+
+ delete ---> void  deleteById(long id);
+		deleteAll();
+		
+		
+		
+
+	 	

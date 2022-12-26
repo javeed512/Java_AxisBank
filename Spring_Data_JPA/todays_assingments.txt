@@ -1,0 +1,28 @@
+Yesterdays project add
+add input validations and user defined exceptions.
+
+using @Query annotations
+1. write dml queries like delete , update
+
+cusotmize delete @Query(delete query)
+
+2. select query 
+
+customize fetch data using different properties but not id.
+
+findByPropertyName(property param)
+
+findByBookName(String bname);
+
+
+Sorting and Paging
+
+findAll(Sort.by("property-name"))
+
+findAll(Paging .....);
+
+
+
+
+
+add swagger in your project.
