@@ -1,0 +1,16 @@
+{
+  "name": "com.axis.ems",
+  "version": "1.0.0",
+  "description": "employee rest api UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JAVEED",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.1"
+  }
+}

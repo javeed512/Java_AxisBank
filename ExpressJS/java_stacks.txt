@@ -1,0 +1,17 @@
+
+Java Full Stack  List
+--------------------------
+
+html,css,bootstrap,js
+database: mysql , oracle , h2 , mongodb
+
+ 1. jsp + servlets + jdbc/hibernate/jpa
+2.  jsp + spring mvc + jdbc/hibernate/jpa
+3.  jsp + spring boot + spring data jpa
+4. soap-ui/swagger  + spring rest api + spring data jpa
+
+5. ejs+expressjs+nodejs + springboot rest api + spring data jpa 
+
+6. ejs+expressjs+nodejs +  mongodb
+
+

@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+
+    <ul>
+        <% 
+        
+            json.map((emp)=>{
+    
+             %>
+    
+             <li><%= emp.eid %></li>
+    
+          <%   
+    
+    
+            });
+    
+        
+        %>
+    </ul>
+
+
+
+    <br>
+
+
+    <div class = "container  col-md-5">
+
+    <table  class="table table-striped table-dark" >
+
+            <caption> Employee Details from Spring Boot Server</caption>
+
+
+        <tr>  <th>EID</th> <th>ENAME</th>  <th>SALARY</th> </tr>
+
+        <% 
+        
+            json.map((emp)=>{
+    
+             %>
+    
+
+             <tr> <td><%= emp.eid  %> </td>   <td>  <%= emp.ename  %>   </td>  <td>   <%= emp.salary  %>   </td>  </tr>
+    
+          <%   
+    
+    
+            });
+    
+        
+        %>
+
+
+
+
+    </table>
+
+</div>
+
+
+
+
+
+    
+</body>
+</html>

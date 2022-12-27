@@ -1,0 +1,16 @@
+{
+"employees":[
+
+    {"eid":101,"ename":"king","salary":50000},
+    {"eid":102,"ename":"smith","salary":60000},
+    {"eid":103,"ename":"tom","salary":45000},
+    {"eid":104,"ename":"jerry","salary":35000},
+    {"eid":105,"ename":"ford","salary":25000}
+
+
+
+
+
+]
+  
+}

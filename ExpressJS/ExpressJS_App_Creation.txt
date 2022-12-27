@@ -1,0 +1,90 @@
+1. Install Nodejs and NPM
+2. Create a new folder --> myapp
+3. myapp --> npm init  
+ it creates pakage.json file
+
+4. install library  ,->  npm  i    express     ejs (embedded js)
+  we get , node_module folder 
+
+5. App.js inside myapp folder
+App.js
+-------
+
+
+const express = require('express')
+
+const app = express()
+
+
+app.listen(8181 , (request,response)=>{ 
+
+        console.log("App started with port 8181");
+
+
+
+  })
+
+6. Run App.js using
+node  App.js 
+
+
+Update App.js
+============
+
+const express = require('express')
+
+const app = express()
+
+
+app.listen(8181 , (request,response)=>{ 
+
+        console.log("App started with port 8181");
+
+
+
+  })
+
+app.set("view engine","ejs");
+
+
+const  fetch = require('node-fetch');
+
+  app.get("/get",(request,response)=>{
+
+    let settings = { method: "Get" };
+    fetch("http://localhost:8080/api/v1/employees/get", settings)
+    .then(response => response.json())
+    .then((json) => {
+        // do something with JSON
+        console.log(json)
+        response.render("display-employees",{json:json})
+    });
+
+
+  })
+
+7. create views folder and create display-employees.ejs file  using Embedded JS library
+
+    <ul>
+        <% 
+        
+            json.map((emp)=>{
+    
+             %>
+    
+             <li><%= emp.eid %></li>
+    
+          <%   
+    
+    
+            });
+    
+        
+        %>
+    </ul>
+
+
+
+
+
+
