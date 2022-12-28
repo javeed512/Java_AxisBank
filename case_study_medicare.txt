@@ -1,0 +1,92 @@
+http://localhost:8080/medicare/admin/login/{username}/{password}
+
+1. create new spring boot project 
+dependency:
+ spring   web , data jpa , mysql/oracle , lombok , swagger 
+
+2. create packages 
+com.oto.medicare
+
+
+Medicine Domain
+=================
+entity --> Medicine  : id, name,price, brand,dom,description
+repository
+service (interface and impln class)  --> crud operations 
+getall , add ,update , delete , getbyname , getbyprice , getbybrand
+
+------------------------------------------------------------------------------------------
+
+ User Domain
+============
+admin login 
+http://localhost:8080/medicare/admin/login/{username}/{password}
+
+rest controller
+
+database 
+user entity 
+id , username ,password , role - USER/ADMIN
+
+user or admin registration  (add operation / post mapping)
+
+usercontroller --> userservice --> userrepository --> user table (user+admin)
+
+login --> admin  ---> curd on medicine
+
+login --> customer --> 1.  getall medicine  2. getbyname 3. getbyprice 4. getbybrand
+
+------------------------------------------------
+
+cart domain
+cid , mid, name,price, brand,dom,description , uid,
+cart entity --> cart table  
+cart repo
+cart service --> getall  from cart , add to cart , delete from cart
+
+after customer login  addMedicineToCart,deleteMedicineFromCart , getMedicinesFromCart --->
+
+@PostMapping("/user/login")
+public String  login(@Request User user , HttpSession session ){
+
+ 	session.setAttribute(user.getUserName());
+	session.setAttribute("role",user.getRole());
+
+	List<User> list =	service.getAllUsers();
+
+
+}
+@GetMapping("/user/{username}")
+public List<User> getAllUsers(){
+
+	service.getAllUsers();
+
+}
+
+
+
+
+
+----------------------------------------------
+
+@ReqMapping("/api/v1/medicines/")
+@RestController
+class MedicineController{
+
+
+		@PostMapping("/add")
+		public Medicine addMedicine(@RequestBody Medicine medicine)
+
+
+		admin  <------	sesssion.getAttribute('role');
+		
+
+	}
+
+
+
+
+
+
+
+
