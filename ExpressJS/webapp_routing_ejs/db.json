@@ -1,0 +1,11 @@
+{
+  "users":[
+
+    {"id":101,"username":"admin","password":"tiger" , "role":"admin"},
+    {"id":102,"username":"javeed","password":"javeed123" , "role":"user"},
+    {"id":103,"username":"abhishek","password":"abhishek123" , "role":"user"}
+
+
+
+  ]
+}
